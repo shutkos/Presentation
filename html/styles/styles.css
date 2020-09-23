@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,400;1,900&display=swap");
+@import url(reset.css);
+body {
+  background: #294369;
+  background: linear-gradient(90deg, #294369 0%, #1f67af 100%);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; }
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto; }
+
+.containerFluid {
+  width: 100%; }
+
+.header {
+  background: #ffffff;
+  text-align: right; }
+
+.logo {
+  width: 100%;
+  max-width: 100px; }
+
+.mainPage {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-top: 50px; }
+
+.intro {
+  width: 70%;
+  color: #ffffff;
+  padding-left: 50px; }
+  .intro h1 {
+    font-size: 6em;
+    font-weight: bold;
+    line-height: 1.5em; }
+  .intro h2 {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 2em; }
+  .intro h4 {
+    font-size: 2em; }
+
+.brain {
+  width: 30%; }
+  .brainImg {
+    width: 100%;
+    max-width: 640px; }
+
+.startButton {
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #ffffff;
+  display: inline-block;
+  background: #139de1;
+  background: linear-gradient(180deg, #139de1 0%, #003674 100%);
+  margin-top: 50px;
+  text-decoration: none;
+  font-size: 1.6em; }
+  .startButton:hover {
+    background: linear-gradient(0deg, #139de1 0%, #003674 100%); }
+
+/*# sourceMappingURL=styles.css.map */

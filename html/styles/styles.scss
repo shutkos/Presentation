@@ -1,0 +1,129 @@
+$color-white: #ffffff;
+$color-black: #000000;
+$color-blue: #0465c4;
+$color-green: #00975a;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,400;1,900&display=swap');
+@import "reset.css";
+
+@mixin bg-gradient {
+  background: rgb(41, 67, 105);
+  background: linear-gradient(90deg, rgba(41, 67, 105, 1) 0%, rgba(31, 103, 175, 1) 100%);
+}
+
+@mixin button {
+  border-radius: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  color: $color-white;
+  display: inline-block;
+}
+
+@mixin button_blue {
+  @include button;
+  background: rgb(19, 157, 225);
+  background: linear-gradient(180deg, rgba(19, 157, 225, 1) 0%, rgba(0, 54, 116, 1) 100%);
+  &:hover{
+    background: linear-gradient(0deg, rgba(19, 157, 225, 1) 0%, rgba(0, 54, 116, 1) 100%);
+  }
+}
+
+@mixin button_green {
+  @include button;
+  background: rgb(0, 83, 46);
+  background: linear-gradient(180deg, rgba(0, 83, 46, 1) 0%, rgba(0, 190, 153, 1) 100%);
+  &:hover{
+    background: linear-gradient(0deg, rgba(0, 83, 46, 1) 0%, rgba(0, 190, 153, 1) 100%);
+  }
+}
+
+@mixin button_violet {
+  @include button;
+  background: rgb(99, 49, 103);
+  background: linear-gradient(180deg, rgba(99, 49, 103, 1) 0%, rgba(210, 154, 211, 1) 100%);
+  &:hover{
+    background: linear-gradient(0deg, rgba(99, 49, 103, 1) 0%, rgba(210, 154, 211, 1) 100%);
+  }
+}
+
+@mixin button_black {
+  @include button;
+  background: rgb(159, 159, 159);
+  background: linear-gradient(180deg, rgba(159, 159, 159, 1) 0%, rgba(52, 52, 52, 1) 100%);
+  &:hover{
+    background: linear-gradient(0deg, rgba(159, 159, 159, 1) 0%, rgba(52, 52, 52, 1) 100%);
+  }
+}
+
+
+body {
+  @include bg-gradient;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.containerFluid {
+  width: 100%;
+}
+
+.header {
+  background: $color-white;
+  text-align: right;
+}
+
+.logo {
+  width: 100%;
+  max-width: 100px;
+}
+
+.mainPage {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-top: 50px;
+}
+
+.intro {
+  width: 70%;
+  color: $color-white;
+  padding-left: 50px;
+
+  h1 {
+    font-size: 6em;
+    font-weight: bold;
+    line-height: 1.5em;
+  }
+
+  h2 {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 2em;
+  }
+
+  h4 {
+    font-size: 2em;
+
+  }
+}
+
+.brain {
+  width: 30%;
+
+  &Img {
+    width: 100%;
+    max-width: 640px;
+  }
+}
+
+.startButton {
+  @include button_blue;
+  margin-top: 50px;
+  text-decoration: none;
+  font-size: 1.6em;
+}
