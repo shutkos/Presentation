@@ -23,7 +23,7 @@ $color-green: #00975a;
   @include button;
   background: rgb(19, 157, 225);
   background: linear-gradient(180deg, rgba(19, 157, 225, 1) 0%, rgba(0, 54, 116, 1) 100%);
-  &:hover{
+  &:hover {
     background: linear-gradient(0deg, rgba(19, 157, 225, 1) 0%, rgba(0, 54, 116, 1) 100%);
   }
 }
@@ -32,7 +32,7 @@ $color-green: #00975a;
   @include button;
   background: rgb(0, 83, 46);
   background: linear-gradient(180deg, rgba(0, 83, 46, 1) 0%, rgba(0, 190, 153, 1) 100%);
-  &:hover{
+  &:hover {
     background: linear-gradient(0deg, rgba(0, 83, 46, 1) 0%, rgba(0, 190, 153, 1) 100%);
   }
 }
@@ -41,7 +41,7 @@ $color-green: #00975a;
   @include button;
   background: rgb(99, 49, 103);
   background: linear-gradient(180deg, rgba(99, 49, 103, 1) 0%, rgba(210, 154, 211, 1) 100%);
-  &:hover{
+  &:hover {
     background: linear-gradient(0deg, rgba(99, 49, 103, 1) 0%, rgba(210, 154, 211, 1) 100%);
   }
 }
@@ -50,11 +50,10 @@ $color-green: #00975a;
   @include button;
   background: rgb(159, 159, 159);
   background: linear-gradient(180deg, rgba(159, 159, 159, 1) 0%, rgba(52, 52, 52, 1) 100%);
-  &:hover{
+  &:hover {
     background: linear-gradient(0deg, rgba(159, 159, 159, 1) 0%, rgba(52, 52, 52, 1) 100%);
   }
 }
-
 
 body {
   @include bg-gradient;
@@ -72,14 +71,31 @@ body {
   width: 100%;
 }
 
+.hide {
+  display: none;
+}
+
 .header {
   background: $color-white;
   text-align: right;
 }
 
+.footer {
+  margin-top: 50px;
+  padding: 20px 50px;
+
+  .info {
+    color: $color-white;
+  }
+}
+
 .logo {
   width: 100%;
   max-width: 100px;
+}
+
+.content {
+  padding-top: 50px;
 }
 
 .mainPage {
@@ -127,3 +143,123 @@ body {
   text-decoration: none;
   font-size: 1.6em;
 }
+
+.pageTitle {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.5em;
+  color: $color-white;
+  text-align: center;
+}
+
+.patients {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.patient {
+  width: calc(20% - 20px);
+  border-radius: 5px;
+  background: rgb(10, 37, 64);
+  background: linear-gradient(0deg, rgba(10, 37, 64, 1) 0%, rgba(14, 50, 86, 1) 100%);
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  padding: 0 0 10px 0;
+  box-shadow: 3px 6px 5px 0 rgba(0,0,0,0.5);
+}
+
+.patient:first-of-type {
+  margin: 10px 10px 10px 20px;
+}
+
+.patient:last-of-type {
+  margin: 10px 20px 10px 10px;
+}
+
+.patientImgWrapper {
+  border-radius: 50%;
+  width: 240px;
+  height: 240px;
+  background: #0a2540;
+  background: linear-gradient(180deg, #0a2540 0%, #0e3256 100%);
+  text-align: center;
+  border: 3px solid #ffffff;
+  position: relative;
+  margin: auto;
+}
+
+.patientImgItem {
+  position: absolute;
+  top: -36px;
+  z-index: 99;
+  right: -1px;
+}
+
+.patientName {
+  padding: 15px 10px;
+  font-weight: bold;
+  color: $color-white;
+}
+
+.levelTitle {
+  font-style: italic;
+  color: $color-white;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin: 10px 20px;
+}
+
+.starItem {
+  background: url("../img/star_opacity.png") no-repeat center;
+  width: 21px;
+  height: 21px;
+}
+
+.starItem.full {
+  background: url("../img/star_white.png") no-repeat center;
+}
+
+.starItem.full:hover {
+  transition: all 1s ease-out;
+  background-size: contain;
+}
+
+.start {
+  display: flex;
+  justify-content: center;
+  transition: all .3s ease-in-out;
+}
+
+.start:hover {
+  transform: scale(1.1);
+}
+
+.levelsTip{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.buttonTips{
+  color: $color-white;
+  font-size: 1em;
+  text-align: center;
+  padding: 50px 0 0 0;
+  font-weight: bold;
+}
+
+.buttonsBlock{
+  display: flex;
+  justify-content: space-around;
+  .startButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
