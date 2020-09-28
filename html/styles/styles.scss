@@ -152,6 +152,23 @@ body {
   text-align: center;
 }
 
+.pageTitleWrapper {
+  display: block;
+  text-align: right;
+  padding-right: 50px;
+}
+
+.homeLink {
+  border: 1px solid $color-white;
+  border-radius: 50%;
+  box-shadow: 3px 6px 5px 0 rgba(0, 0, 0, 0.5);
+  transition: all .3s ease-in-out;
+}
+
+.homeLink:hover {
+  transform: scale(1.1);
+}
+
 .patients {
   display: flex;
   justify-content: space-between;
@@ -166,7 +183,7 @@ body {
   text-align: center;
   margin: 10px 10px 10px 10px;
   padding: 0 0 10px 0;
-  box-shadow: 3px 6px 5px 0 rgba(0,0,0,0.5);
+  box-shadow: 3px 6px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 .patient:first-of-type {
@@ -238,13 +255,13 @@ body {
   transform: scale(1.1);
 }
 
-.levelsTip{
+.levelsTip {
   display: flex;
   justify-content: space-around;
   padding: 20px 0;
 }
 
-.buttonTips{
+.buttonTips {
   color: $color-white;
   font-size: 1em;
   text-align: center;
@@ -252,14 +269,92 @@ body {
   font-weight: bold;
 }
 
-.buttonsBlock{
+.buttonsBlock {
   display: flex;
   justify-content: space-around;
-  .startButton{
+
+  .startButton {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 }
+
+.contentItem {
+  display: flex;
+  justify-content: space-around;
+
+  .hero {
+    width: 30%;
+
+    .patient {
+      width: 100%;
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  .relapses {
+    width: 70%;
+  }
+
+  .dots {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    padding: 5px;
+    margin-right: 50px;
+  }
+
+  .insideDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $color-white;
+  }
+}
+
+.bgLine{
+  background:url(../img/bg_line.png) no-repeat 714px, linear-gradient(90deg, #294369 0%, #1f67af 100%);
+  background-size: contain;
+}
+
+.relapseItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .date {
+    color: $color-white;
+    width: 200px;
+  }
+
+  .speachBuble {
+    position: relative;
+    background: $color-white;
+    color: $color-black;
+    font-size: 20px;
+    line-height: 120px;
+    text-align: center;
+    width: 250px;
+    height: 120px;
+    border-radius: 10px;
+    padding: 0;
+  }
+  .speachBuble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent $color-white;
+    border-width: 20px 20px 20px 0;
+    top: 50%;
+    left: -20px;
+    margin-top: -20px;
+  }}
 
 
