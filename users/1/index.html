@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>РС чи ХСОНМ</title>
+    <link rel="stylesheet" href="../../styles/styles.css">
+</head>
+<body class="bgLine">
+<div class="containerFluid">
+    <div class="header hide">
+        <img class="logo" src="../../img/Roche_Logo.png" alt="">
+    </div>
+    <div class="content">
+        <div class="selectPatient">
+            <h1 class="pageTitle">
+                <a href="/users/" class="pageTitleWrapper">
+                    <img class="homeLink" src="../../img/home.png" alt="">
+                </a>
+            </h1>
+            <div class="contentItem">
+                <div class="hero">
+                    <ul class="patients">
+                        <li class="patient">
+                            <div class="patientImgWrapper">
+                                <img class="patientImgItem" src="../../img/1.png" alt="">
+                            </div>
+                            <div class="patientName">
+                                <p>Джейн</p>
+                                <p>Вік: 23 роки</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relapses">
+                    <ul class="relapsesWrapper">
+                        <li class="relapseItem">
+                            <div class="date">Серпень 2019р.</div>
+                            <div class="dots">
+                                <div class="insideDot"></div>
+                            </div>
+                            <div class="speachBuble">
+                                <ul>
+                                    <li>Перші клінічні прояви: зниження чутливості в лівій половині тіла, парестезія
+                                        верхніх кінцівок
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="relapseItem">
+                            <div class="date">Вересень 2019р.</div>
+                            <div class="dots">
+                                <div class="insideDot"></div>
+                            </div>
+                            <div class="speachBuble">
+                                <ul>
+                                    <li>
+                                        Лівостороння гіпестезія на рівні D5-D6 сегментів
+                                    </li>
+                                    <li>
+                                        Зниження поверхневих черевних рефлексів
+                                    </li>
+                                    <li>
+                                        Підвищення глибоких сухожилкових рефлексів
+                                    </li>
+                                    <li>
+                                        Відсутні: слабкість, симптом Лерміта та порушення функцій сфінктера
+                                    </li>
+                                    <li>Показник за шкалою EDSS: 2,5</li>
+                                </ul>
+                                <div class="userIcons">
+                                    <img src="../../img/mri.png" alt="">
+                                    <img src="../../img/lab.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="userIconsTip">
+            <div class="userIconsTipItem">
+                <img src="../../img/mri.png" alt="">
+                <p>МРТ</p>
+            </div>
+            <div class="userIconsTipItem">
+                <img src="../../img/lab.png" alt="">
+                <p>Результати лабараторних досліджень</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <ul class="modalButtons">
+            <li class="modalButtonsItem">
+                <button class="buttonItem js-modal" data-modal="modal-1">Результати МРТ &nbsp; <img
+                        src="../../img/pointer.png"></button>
+            </li>
+            <li class="modalButtonsItem">
+                <button class="buttonItem js-modal" data-modal="modal-2" href="">Результати лабораторних досліджень
+                    &nbsp; <img src="../../img/pointer.png"></button>
+            </li>
+            <li class="modalButtonsItem">
+                <a class="buttonItem"  href="exam.html">Ставимо діагноз &nbsp; <img
+                        src="../../img/pointer.png"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <ul class="info">
+            <li>EDMUS – Європейська база даних з оцінювання ступеня розсіяного склерозу
+                (European Database for Multiple Sclerosis); МП –метилпреднізолон;
+            </li>
+            <li>ОКС – олігоклональні стрічки (смуги); ЗВП – зорові викликані потенціали.</li>
+        </ul>
+    </div>
+</div>
+
+<div id="modal-1" class="modal">
+    <div class="modal-inner">
+        <a class="js-close-modal">&times;</a>
+        <div class="modal-content">
+            <h3 class="blue">Результати дослідження МРТ</h3>
+            <div class="modalContentContainer">
+                <div class="leftSide">
+                    <ul>
+                        <li><b>МРТ головного
+                            мозку</b>
+                            <p>Вогнища демієлінізації на Т2-зважених зображеннях (у правій частині напівовального центру
+                                мозку і у лівій частині лобової частки)
+                            </p>
+                        </li>
+                        <li>
+                            <b>МРТ хребта</b>
+                            <p>Вогнища пошкодження, що
+                                накопичують контраст, на рівні
+                                сегментів С2 та D1-2
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rightSide">
+                    <strong>вересень 2019 р.</strong>
+                    <img src="../../pictures/1/mri_patient_1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-2" class="modal">
+    <div class="modal-inner">
+        <a class="js-close-modal">&times;</a>
+        <div class="modal-content">
+            <h3 class="green">Результати лабораторних досліджень
+            </h3>
+            <div class="modalContentContainer">
+                <div class="leftSide fullWidth">
+                    <strong>Вересень
+                        2019 р.:
+                    </strong>
+                    <ul>
+                        <li>
+                            <p>Мультимодальні викликані потенціали – в межах норми
+                            </p>
+                        </li>
+                        <li>
+                            <p>AQP4-IgG (аутоантитіла до аквапорину-4) – відсутні</p>
+                        </li>
+                        <li>
+                            <p>MOG-IgG (аутоантитіла до мієлінового олігодендроцитарного глікопротеїну) – відсутні
+                            </p>
+                        </li>
+                        <li>
+                            <p>ОКС – результат позитивний</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/modal.js"></script>
+</body>
+</html>

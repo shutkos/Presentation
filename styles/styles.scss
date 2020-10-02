@@ -2,7 +2,6 @@ $color-white: #ffffff;
 $color-black: #000000;
 $color-blue: #0465c4;
 $color-green: #00975a;
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,400;1,900&display=swap');
 @import "reset.css";
 
@@ -54,6 +53,274 @@ $color-green: #00975a;
     background: linear-gradient(0deg, rgba(159, 159, 159, 1) 0%, rgba(52, 52, 52, 1) 100%);
   }
 }
+
+//modal
+$time: 320ms;
+$ease: ease;
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ', '};
+    }
+  }
+
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: $animations;
+  animation: $animations;
+}
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+@include keyframes(fadeIn) {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@include keyframes(fadeOut) {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@mixin transition($val...) {
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  -ms-transition: $val;
+  -o-transition: $val;
+  transition: $val;
+}
+@mixin transform($val...) {
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -ms-transform: $val;
+  -o-transform: $val;
+  transform: $val;
+}
+.modalButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.modalButtonsItem {
+  @include button;
+  margin-right: 20px;
+  font-size: 14px;
+
+  .buttonItem {
+    color: $color-white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.modalButtonsItem:nth-child(1) {
+  @include button_blue;
+  border-radius: 40px;
+}
+
+.modalButtonsItem:nth-child(2) {
+  @include button_green;
+  border-radius: 40px;
+}
+
+.modalButtonsItem:nth-child(3) {
+  @include button_violet;
+  border-radius: 40px;
+}
+
+.modal-body {
+  overflow: hidden;
+  position: relative;
+
+  &:before {
+    position: fixed;
+    display: block;
+    content: '';
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+  }
+
+  &:before {
+    @include animation(fadeIn $time $ease);
+
+    @include transition(opacity $ease $time);
+  }
+
+  &.modal-fadeOut {
+    &:before {
+      opacity: 0;
+    }
+  }
+}
+
+.modal {
+  @include transition(all $ease 0.01s);
+
+  display: block;
+  opacity: 0;
+  height: 0;
+  position: fixed;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  text-align: center;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &.modal-visible {
+    opacity: 1;
+    height: auto;
+    bottom: 0;
+  }
+}
+
+.modal-inner {
+  @include transition(all $ease $time);
+
+  @include transform(translateY(-50px));
+
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  width: 90%;
+  max-width: 900px;
+  opacity: 0;
+  margin: 40px 0;
+  border-radius: 4px;
+  box-shadow: 0 30px 18px -20px rgb(2, 2, 2);
+
+  &.modal-reveal {
+    @include transform(translateY(0));
+    opacity: 1;
+  }
+}
+
+.js-close-modal {
+  transition: color 320ms ease;
+  color: $color-white;
+
+  position: absolute;
+  z-index: 2;
+  right: -15px;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  background: $color-blue;
+  border-radius: 50%
+}
+
+.js-close-modal:hover {
+  color: #000;
+}
+
+button {
+  @include transition(all $time $ease);
+  border: none;
+  background: none;
+}
+
+button:active{
+  border: none;
+  outline: none;
+}
+button:focus{
+  border: none;
+  outline: none;
+}
+
+.modal-content {
+  padding: 50px 15px 15px 15px;
+
+  h3 {
+
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  h3.blue {
+    color: $color-blue;
+  }
+
+  h3.green {
+    color: $color-green;
+  }
+
+  .modalContentContainer {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+
+    b, strong {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 40px;
+      list-style: disc;
+      text-align: left;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .leftSide, .rightSide {
+      width: 50%;
+    }
+
+    .fullWidth {
+      width: 100%;
+    }
+  }
+}
+
+//modalEnd
 
 body {
   @include bg-gradient;
@@ -283,6 +550,7 @@ body {
 .contentItem {
   display: flex;
   justify-content: space-around;
+  padding-top: 20px;
 
   .hero {
     width: 30%;
@@ -315,8 +583,8 @@ body {
   }
 }
 
-.bgLine{
-  background:url(../img/bg_line.png) no-repeat 714px, linear-gradient(90deg, #294369 0%, #1f67af 100%);
+.bgLine {
+  background: url(../img/bg_line.png) no-repeat 714px, linear-gradient(90deg, #294369 0%, #1f67af 100%);
   background-size: contain;
 }
 
@@ -335,14 +603,18 @@ body {
     position: relative;
     background: $color-white;
     color: $color-black;
-    font-size: 20px;
-    line-height: 120px;
-    text-align: center;
-    width: 250px;
-    height: 120px;
+    font-size: 16px;
+    min-width: 250px;
+    min-height: 20px;
     border-radius: 10px;
-    padding: 0;
+    padding: 10px;
+
+    ul {
+      list-style: disc;
+      padding-left: 40px;
+    }
   }
+
   .speachBuble:after {
     content: '';
     position: absolute;
@@ -351,10 +623,37 @@ body {
     z-index: 1;
     border-style: solid;
     border-color: transparent $color-white;
-    border-width: 20px 20px 20px 0;
+    border-width: 10px 10px 10px 0;
     top: 50%;
-    left: -20px;
-    margin-top: -20px;
-  }}
+    left: -10px;
+    margin-top: -10px;
+  }
+}
+
+.userIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  img {
+    margin-right: 10px;
+  }
+}
+
+.userIconsTip {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  &Item {
+    padding: 20px;
+    color: $color-white;
+    font-weight: bold;
+
+    p {
+      text-align: center;
+    }
+  }
+}
 
 
