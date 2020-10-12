@@ -55,9 +55,14 @@
   font-size: 14px; }
   .modalButtonsItem .buttonItem {
     color: #ffffff;
+    min-width: 200px;
     text-decoration: none;
     display: flex;
-    align-items: center; }
+    justify-content: space-around;
+    align-items: center;
+    position: relative; }
+    .modalButtonsItem .buttonItem img {
+      width: 40px; }
 
 .modalButtonsItem:nth-child(1) {
   border-radius: 10px;
@@ -102,10 +107,10 @@
     position: fixed;
     display: block;
     content: '';
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     background-color: rgba(0, 0, 0, 0.75);
     z-index: 10; }
   .modal-body:before {
@@ -113,19 +118,11 @@
     -moz-animation: fadeIn 320ms ease;
     -o-animation: fadeIn 320ms ease;
     animation: fadeIn 320ms ease;
-    -webkit-transition: opacity ease 320ms;
-    -moz-transition: opacity ease 320ms;
-    -ms-transition: opacity ease 320ms;
-    -o-transition: opacity ease 320ms;
     transition: opacity ease 320ms; }
   .modal-body.modal-fadeOut:before {
     opacity: 0; }
 
 .modal {
-  -webkit-transition: all ease 0.01s;
-  -moz-transition: all ease 0.01s;
-  -ms-transition: all ease 0.01s;
-  -o-transition: all ease 0.01s;
   transition: all ease 0.01s;
   display: block;
   opacity: 0;
@@ -146,10 +143,6 @@
     bottom: 0; }
 
 .modal-inner {
-  -webkit-transition: all ease 320ms;
-  -moz-transition: all ease 320ms;
-  -ms-transition: all ease 320ms;
-  -o-transition: all ease 320ms;
   transition: all ease 320ms;
   -webkit-transform: translateY(-50px);
   -moz-transform: translateY(-50px);
@@ -193,10 +186,6 @@
   color: #000; }
 
 button {
-  -webkit-transition: all 320ms ease;
-  -moz-transition: all 320ms ease;
-  -ms-transition: all 320ms ease;
-  -o-transition: all 320ms ease;
   transition: all 320ms ease;
   border: none;
   background: none; }
@@ -453,7 +442,7 @@ body {
     background-color: #ffffff; }
 
 .bgLine {
-  background: url(../img/bg_line.png) no-repeat 714px, linear-gradient(90deg, #294369 0%, #1f67af 100%);
+  background: url(../img/bg_line.png) no-repeat 719px, linear-gradient(90deg, #294369 0%, #1f67af 100%);
   background-size: contain; }
 
 .relapseItem {
@@ -463,13 +452,17 @@ body {
   margin-bottom: 20px; }
   .relapseItem .date {
     color: #ffffff;
-    width: 200px; }
+    width: 210px; }
+  .relapseItem .date::first-letter {
+    text-transform: uppercase; }
   .relapseItem .speachBuble {
     position: relative;
+    display: flex;
     background: #ffffff;
     color: #000000;
     font-size: 16px;
     min-width: 250px;
+    max-width: 640px;
     min-height: 20px;
     border-radius: 10px;
     padding: 10px; }
@@ -494,7 +487,9 @@ body {
   flex-direction: row;
   justify-content: flex-end; }
   .userIcons img {
-    margin-right: 10px; }
+    margin-right: 10px;
+    width: 40px;
+    height: 40px; }
 
 .userIconsTip {
   display: flex;
@@ -504,7 +499,73 @@ body {
     padding: 20px;
     color: #ffffff;
     font-weight: bold; }
+    .userIconsTipItem img {
+      width: 40px;
+      height: 40px; }
     .userIconsTipItem p {
       text-align: center; }
+
+.clinicalReview {
+  width: 60%; }
+  .clinicalReview h3 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold; }
+  .clinicalReview .modalButtons {
+    margin-top: 40px; }
+
+.reviewItem {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0; }
+  .reviewItem .reviewListItem {
+    padding-left: 40px;
+    list-style: disc; }
+    .reviewItem .reviewListItem li {
+      margin-bottom: 15px; }
+
+.answerPic {
+  position: absolute;
+  top: -20px;
+  left: -20px; }
+
+.answerWrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+  .answerWrapper .answerItem {
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%; }
+    .answerWrapper .answerItem ul {
+      list-style: disc;
+      padding-left: 40px; }
+      .answerWrapper .answerItem ul li {
+        padding: 5px 0; }
+
+.navButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 20px; }
+  .navButtons .buttonItem {
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #ffffff;
+    display: inline-block;
+    background: #9f9f9f;
+    background: linear-gradient(180deg, #9f9f9f 0%, #343434 100%);
+    margin-right: 15px;
+    display: flex;
+    align-items: center; }
+    .navButtons .buttonItem:hover {
+      background: linear-gradient(0deg, #9f9f9f 0%, #343434 100%); }
+    .navButtons .buttonItem img {
+      width: 40px; }
 
 /*# sourceMappingURL=styles.css.map */

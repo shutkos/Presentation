@@ -22,25 +22,25 @@
                     <ul class="patients">
                         <li class="patient">
                             <div class="patientImgWrapper">
-                                <img class="patientImgItem" src="../../img/1.png" alt="">
+                                <img class="patientImgItem" src="../../img/4.png" alt="">
                             </div>
                             <div class="patientName">
-                                <p>Джейн</p>
-                                <p>Вік: 23 роки</p>
+                                <p>Борис</p>
+                                <p>Вік: 58 років</p>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="clinicalReview">
-                    <h3>Стислий опис клінічного випадку Джейн</h3>
+                    <h3>Стислий опис клінічного випадку Бориса</h3>
                     <div class="reviewItem">
                         <ul class="reviewListItem">
-                            <li>Рецидивуючий короткий мієліт поперекового відділу
-                                спинного мозку
+                            <li>Рецидиви двостороннього НЗН
                             </li>
-                            <li>Результат дослідження на наявність ОКС – позитивний</li>
-                            <li>2 вогнища у головному мозку, які нагадують ураження
-                                при РС
+                            <li>Дифузні вогнища у ділянці потовщення мозолистого тіла
+                            </li>
+                            <li>ВППМ</li>
+                            <li>Системна аутоімунна реакція
                             </li>
                         </ul>
                     </div>
@@ -50,23 +50,22 @@
                         <li class="modalButtonsItem">
 
                             <button class="buttonItem answer" data-value="1">
-                                <img class="answerPic" src="../../img/true.png" alt="" style="display: none">
-                                &nbsp; РС
+                                <img class="answerPic" src="../../img/false.png" alt="" style="display: none">
+                                &nbsp; PC&nbsp;
                                 <img src="../../img/pointer.png">
                             </button>
                         </li>
                         <li class="modalButtonsItem">
                             <button class="buttonItem answer" data-value="2">
-                                <img class="answerPic" src="../../img/false.png" alt="" style="display: none">
-                                &nbsp; ХСОНМ
+                                <img class="answerPic" src="../../img/true.png" alt="" style="display: none">
+                                &nbsp; ХСОНМ&nbsp;
                                 <img src="../../img/pointer.png">
                             </button>
                         </li>
                         <li class="modalButtonsItem answer">
                             <button class="buttonItem" data-value="3">
                                 <img class="answerPic" src="../../img/false.png" alt="" style="display: none">
-                                &nbsp; Невизначений діагноз
-                                &nbsp; &nbsp;
+                                &nbsp; Невизначений діагноз &nbsp; &nbsp;
                                 <img src="../../img/pointer.png">
                             </button>
                         </li>
@@ -75,20 +74,26 @@
                     <ul class="answerWrapper">
                         <li class="answerItem" data-value="yes" style="display: none">
                             <ul>
-                                <li><p>У даному випадку можна спостерігати декілька ознак, пов’язаних із РС, включаючи
-                                    наявність вогнищ у головному та спинному мозку і наявність ОКС
-
+                                <li><p>У даному випадку можна спостерігати типові ознаки, пов’язані із ХСОНМ, включаючи
+                                    двосторонній НЗН і вогнища у головному мозку, характерні для ХСОНМ
                                 </p></li>
                                 <li>
-                                    <p>У відповідності до діагностичних критеріїв МакДональда у редакції 2017 року цьому
-                                        пацієнту можна поставити діагноз «розсіяний склероз» через наявність у нього
-                                        наступних ознак: - Множинні вогнища ураження з об’єктивними клінічними доказами
-                                        і наявність ОКС
+                                    <p>У відповідності до діагностичних критеріїв IPND з діагностики ХСОНМ у хворих без
+                                        антитіл AQP4-IgG цьому пацієнту можна поставити діагноз «ХСОНМ» через наявність
+                                        у нього наступних ознак:
                                     </p>
+                                    <ul>
+                                        <li>наявність ≥ 2 провідних клінічних ознак ХСОНМ (НЗН і гострий мієліт з ВППМ)
+                                        </li>
+                                        <li>відповідність діагностичним критеріям МРТ (наявність ВППМ) – розсіювання у
+                                            просторі
+                                        </li>
+                                        <li>відсутність ознак для постановки альтернативного діагнозу (наприклад, РС)
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <p>Відсутність типових ознак ХСОНМ як-от: аутоантитіла до аквапорину-4 (AQP4-IgG) і
-                                        неврит зорового нерва
+                                    <p>Відсутність у пацієнта типових ознак РС як-от: Т2 гіперінтенсивні вогнища чи ОКС
                                     </p>
                                 </li>
                             </ul>
@@ -115,10 +120,15 @@
     </div>
     <div class="footer">
         <ul class="info">
-            <li>EDMUS – Європейська база даних з оцінювання ступеня розсіяного склерозу
-                (European Database for Multiple Sclerosis); МП –метилпреднізолон;
+            <li>AQP4-IgG – аутоантитіла до аквапорину-4;
             </li>
-            <li>ОКС – олігоклональні стрічки (смуги); ЗВП – зорові викликані потенціали.</li>
+            <li>IPND – міжнародна група експертів з
+                діагностики нейромієліту зорового нерва;</li>
+            <li>ВППМ – вогнища протяжного поперечного
+                мієліту;</li>
+            <li>ХСОНМ – хвороби спектра оптиконевромієліту;</li>
+            <li>ОКС – олігоклональні стрічки (смуги);</li>
+            <li>НЗН – неврит зорового нерва</li>
         </ul>
     </div>
 </div>
@@ -166,23 +176,23 @@
             case "1" :
                 disableBtn(btn);
                 changer(answerPic);
-                changer(yes);
-                setTimeout(() => {
-                    changer(answerPic);
-                    changer(yes);
-                    enableBtn(btn);
-                }, 7000);
-
-                break;
-            case "2" :
-                disableBtn(btn);
-                changer(answerPic);
                 changer(no);
                 setTimeout(() => {
                     changer(answerPic);
                     changer(no);
                     enableBtn(btn);
                 }, 3000);
+
+                break;
+            case "2" :
+                disableBtn(btn);
+                changer(answerPic);
+                changer(yes);
+                setTimeout(() => {
+                    changer(answerPic);
+                    changer(yes);
+                    enableBtn(btn);
+                }, 7000);
                 break;
             case "3" :
                 disableBtn(btn);

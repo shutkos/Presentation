@@ -110,10 +110,6 @@ $ease: ease;
   }
 }
 @mixin transition($val...) {
-  -webkit-transition: $val;
-  -moz-transition: $val;
-  -ms-transition: $val;
-  -o-transition: $val;
   transition: $val;
 }
 @mixin transform($val...) {
@@ -136,9 +132,15 @@ $ease: ease;
 
   .buttonItem {
     color: $color-white;
+    min-width: 200px;
     text-decoration: none;
     display: flex;
+    justify-content: space-around;
     align-items: center;
+    position: relative;
+    img{
+      width: 40px;
+    }
   }
 }
 
@@ -165,10 +167,10 @@ $ease: ease;
     position: fixed;
     display: block;
     content: '';
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     background-color: rgba(0, 0, 0, 0.75);
     z-index: 10;
   }
@@ -584,7 +586,7 @@ body {
 }
 
 .bgLine {
-  background: url(../img/bg_line.png) no-repeat 714px, linear-gradient(90deg, #294369 0%, #1f67af 100%);
+  background: url(../img/bg_line.png) no-repeat 719px, linear-gradient(90deg, #294369 0%, #1f67af 100%);
   background-size: contain;
 }
 
@@ -596,15 +598,21 @@ body {
 
   .date {
     color: $color-white;
-    width: 200px;
+    width: 210px;
+  }
+
+  .date::first-letter{
+    text-transform: uppercase;
   }
 
   .speachBuble {
     position: relative;
+    display: flex;
     background: $color-white;
     color: $color-black;
     font-size: 16px;
     min-width: 250px;
+    max-width: 640px;
     min-height: 20px;
     border-radius: 10px;
     padding: 10px;
@@ -637,6 +645,8 @@ body {
 
   img {
     margin-right: 10px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -649,11 +659,82 @@ body {
     padding: 20px;
     color: $color-white;
     font-weight: bold;
-
+    img{
+      width: 40px;
+      height: 40px;
+    }
     p {
       text-align: center;
     }
   }
 }
 
+.clinicalReview{
+  width: 60%;
+  h3{
+    color:$color-white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .modalButtons{
+    margin-top: 40px;
+  }
+}
+
+.reviewItem{
+  background: $color-white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  .reviewListItem{
+    padding-left: 40px;
+    list-style: disc;
+    li{
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.answerPic{
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+
+.answerWrapper{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  .answerItem{
+    border-radius: 10px;
+    background: $color-white;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+    ul{
+      list-style: disc;
+      padding-left: 40px;
+      li{
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+.navButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-top: 20px;
+  .buttonItem{
+    @include button_black;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    img{
+      width: 40px;
+    }
+  }
+}
 

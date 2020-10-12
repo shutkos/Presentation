@@ -22,26 +22,22 @@
                     <ul class="patients">
                         <li class="patient">
                             <div class="patientImgWrapper">
-                                <img class="patientImgItem" src="../../img/1.png" alt="">
+                                <img class="patientImgItem" src="../../img/2.png" alt="">
                             </div>
                             <div class="patientName">
-                                <p>Джейн</p>
-                                <p>Вік: 23 роки</p>
+                                <p>Елейн</p>
+                                <p>Вік: 28 роки</p>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="clinicalReview">
-                    <h3>Стислий опис клінічного випадку Джейн</h3>
+                    <h3>Стислий опис клінічного випадку Елейн</h3>
                     <div class="reviewItem">
                         <ul class="reviewListItem">
-                            <li>Рецидивуючий короткий мієліт поперекового відділу
-                                спинного мозку
-                            </li>
-                            <li>Результат дослідження на наявність ОКС – позитивний</li>
-                            <li>2 вогнища у головному мозку, які нагадують ураження
-                                при РС
-                            </li>
+                            <li>Тяжка форма рецидивуючого ізольованого НЗН</li>
+                            <li>Наявність AQP4-IgG</li>
+                            <li>Відсутність ОКС</li>
                         </ul>
                     </div>
                     <h3>Який діагноз ви б поставили у цьому випадку?
@@ -50,14 +46,14 @@
                         <li class="modalButtonsItem">
 
                             <button class="buttonItem answer" data-value="1">
-                                <img class="answerPic" src="../../img/true.png" alt="" style="display: none">
-                                &nbsp; РС
+                                <img class="answerPic" src="../../img/false.png" alt="" style="display: none">
+                                &nbsp; РС &nbsp;
                                 <img src="../../img/pointer.png">
                             </button>
                         </li>
                         <li class="modalButtonsItem">
                             <button class="buttonItem answer" data-value="2">
-                                <img class="answerPic" src="../../img/false.png" alt="" style="display: none">
+                                <img class="answerPic" src="../../img/true.png" alt="" style="display: none">
                                 &nbsp; ХСОНМ
                                 <img src="../../img/pointer.png">
                             </button>
@@ -66,29 +62,34 @@
                             <button class="buttonItem" data-value="3">
                                 <img class="answerPic" src="../../img/false.png" alt="" style="display: none">
                                 &nbsp; Невизначений діагноз
-                                &nbsp; &nbsp;
+
                                 <img src="../../img/pointer.png">
                             </button>
                         </li>
                     </ul>
 
                     <ul class="answerWrapper">
+                        <li class="answerItem" data-value="no" style="display: none">
+                            <p>На жаль, цей діагноз не є вірним
+                            </p>
+
+                        </li>
                         <li class="answerItem" data-value="yes" style="display: none">
                             <ul>
-                                <li><p>У даному випадку можна спостерігати декілька ознак, пов’язаних із РС, включаючи
-                                    наявність вогнищ у головному та спинному мозку і наявність ОКС
-
+                                <li><p>У даному випадку можна спостерігати декілька ознак, пов’язаних із ХСОНМ,
+                                    включаючи тяжку форму НЗН і наявність аутоантитіл до аквапорину-4 (AQP4-IgG)
                                 </p></li>
                                 <li>
-                                    <p>У відповідності до діагностичних критеріїв МакДональда у редакції 2017 року цьому
-                                        пацієнту можна поставити діагноз «розсіяний склероз» через наявність у нього
-                                        наступних ознак: - Множинні вогнища ураження з об’єктивними клінічними доказами
-                                        і наявність ОКС
+                                    <p>У відповідності до діагностичних критеріїв IPND цьому пацієнту можна поставити діагноз «ХСОНМ» через наявність у нього наступних ознак:
                                     </p>
+                                    <ul>
+                                        <li>наявність антитіл AQP4-IgG 	- відсутність ознак для постановки альтернативного діагнозу (наприклад, РС)
+                                        </li>
+                                        <li>наявність НЗН, провідної клінічної ознаки ХСОНМ</li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <p>Відсутність типових ознак ХСОНМ як-от: аутоантитіла до аквапорину-4 (AQP4-IgG) і
-                                        неврит зорового нерва
+                                    <p>Відсутність типових ознак РС як-от: Т2 гіперінтенсивні вогнища чи ОКС
                                     </p>
                                 </li>
                             </ul>
@@ -103,10 +104,6 @@
                                     <img src="../../img/pointer.png">
                                 </a>
                             </div>
-                        </li>
-                        <li class="answerItem" data-value="no" style="display: none">
-                            <p>На жаль, цей діагноз не є вірним
-                            </p>
                         </li>
                     </ul>
                 </div>
@@ -166,23 +163,23 @@
             case "1" :
                 disableBtn(btn);
                 changer(answerPic);
-                changer(yes);
-                setTimeout(() => {
-                    changer(answerPic);
-                    changer(yes);
-                    enableBtn(btn);
-                }, 7000);
-
-                break;
-            case "2" :
-                disableBtn(btn);
-                changer(answerPic);
                 changer(no);
                 setTimeout(() => {
                     changer(answerPic);
                     changer(no);
                     enableBtn(btn);
                 }, 3000);
+
+                break;
+            case "2" :
+                disableBtn(btn);
+                changer(answerPic);
+                changer(yes);
+                setTimeout(() => {
+                    changer(answerPic);
+                    changer(yes);
+                    enableBtn(btn);
+                }, 7000);
                 break;
             case "3" :
                 disableBtn(btn);
