@@ -568,4 +568,13 @@ body {
     .navButtons .buttonItem img {
       width: 40px; }
 
+.catButtons {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 50px; }
+  .catButtons li {
+    width: 100%;
+    max-width: 360px;
+    margin: 20px auto; }
+
 /*# sourceMappingURL=styles.css.map */
