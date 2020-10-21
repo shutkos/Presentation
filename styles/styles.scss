@@ -74,6 +74,7 @@ $ease: ease;
   -o-animation: $animations;
   animation: $animations;
 }
+
 @mixin keyframes($animationName) {
   @-webkit-keyframes #{$animationName} {
     @content;
@@ -91,6 +92,7 @@ $ease: ease;
     @content;
   }
 }
+
 @include keyframes(fadeIn) {
   0% {
     opacity: 0;
@@ -100,6 +102,7 @@ $ease: ease;
     opacity: 1;
   }
 }
+
 @include keyframes(fadeOut) {
   0% {
     opacity: 1;
@@ -109,9 +112,11 @@ $ease: ease;
     opacity: 0;
   }
 }
+
 @mixin transition($val...) {
   transition: $val;
 }
+
 @mixin transform($val...) {
   -webkit-transform: $val;
   -moz-transform: $val;
@@ -119,6 +124,7 @@ $ease: ease;
   -o-transform: $val;
   transform: $val;
 }
+
 .modalButtons {
   display: flex;
   flex-direction: row;
@@ -138,7 +144,8 @@ $ease: ease;
     justify-content: space-around;
     align-items: center;
     position: relative;
-    img{
+
+    img {
       width: 40px;
     }
   }
@@ -261,11 +268,12 @@ button {
   background: none;
 }
 
-button:active{
+button:active {
   border: none;
   outline: none;
 }
-button:focus{
+
+button:focus {
   border: none;
   outline: none;
 }
@@ -419,6 +427,18 @@ body {
   line-height: 1.5em;
   color: $color-white;
   text-align: center;
+}
+
+h2.pageTitle {
+  font-size: 1.75em;
+}
+
+h3.pageTitle {
+  font-size: 1.5em;
+}
+
+h4.pageTitle {
+  font-size: 1.25em;
 }
 
 .pageTitleWrapper {
@@ -601,7 +621,7 @@ body {
     width: 210px;
   }
 
-  .date::first-letter{
+  .date::first-letter {
     text-transform: uppercase;
   }
 
@@ -659,93 +679,148 @@ body {
     padding: 20px;
     color: $color-white;
     font-weight: bold;
-    img{
+
+    img {
       width: 40px;
       height: 40px;
     }
+
     p {
       text-align: center;
     }
   }
 }
 
-.clinicalReview{
+.clinicalReview {
   width: 60%;
-  h3{
-    color:$color-white;
+
+  h3 {
+    color: $color-white;
     font-size: 24px;
     font-weight: bold;
   }
-  .modalButtons{
+
+  .modalButtons {
     margin-top: 40px;
   }
 }
 
-.reviewItem{
+.reviewItem {
   background: $color-white;
   padding: 20px;
   border-radius: 10px;
   margin: 20px 0;
-  .reviewListItem{
+
+  .reviewListItem {
     padding-left: 40px;
     list-style: disc;
-    li{
+
+    li {
       margin-bottom: 15px;
     }
   }
 }
 
-.answerPic{
+.answerPic {
   position: absolute;
   top: -20px;
   left: -20px;
 }
 
-.answerWrapper{
+.answerWrapper {
   margin-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  .answerItem{
+
+  .answerItem {
     border-radius: 10px;
     background: $color-white;
     padding: 20px;
     margin: 20px 0;
     width: 100%;
-    ul{
+
+    ul {
       list-style: disc;
       padding-left: 40px;
-      li{
+
+      li {
         padding: 5px 0;
       }
     }
   }
 }
 
-.navButtons{
+.navButtons {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   padding-top: 20px;
-  .buttonItem{
+
+  .buttonItem {
     @include button_black;
     margin-right: 15px;
     display: flex;
     align-items: center;
-    img{
+
+    img {
       width: 40px;
     }
   }
 }
 
-.catButtons{
+.catButtons {
   display: flex;
   flex-direction: column-reverse;
   padding-top: 50px;
-  li{
+
+  li {
     width: 100%;
     max-width: 360px;
     margin: 20px auto;
   }
 }
 
+.slide {
+  border: 3px solid $color-white;
+  margin: 50px 20px 50px 20px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  li {
+    display: block;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid $color-white;
+    position: relative;
+    span{
+      display: block;
+      color: $color-blue;
+      background: $color-white;
+      position: absolute;
+      bottom: 55px;
+      left: 0;
+      border-radius: 50%;
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+      line-height: 1.3;
+    }
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
