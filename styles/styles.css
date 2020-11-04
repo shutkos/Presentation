@@ -43,7 +43,8 @@
 .modalButtons {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  z-index: 80; }
 
 .modalButtonsItem {
   border-radius: 10px;
@@ -571,7 +572,8 @@ h4.pageTitle {
     background: linear-gradient(180deg, #9f9f9f 0%, #343434 100%);
     margin-right: 15px;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    text-decoration: none; }
     .navButtons .buttonItem:hover {
       background: linear-gradient(0deg, #9f9f9f 0%, #343434 100%); }
     .navButtons .buttonItem img {
@@ -591,6 +593,41 @@ h4.pageTitle {
   margin: 50px 20px 50px 20px; }
   .slide img {
     width: 100%; }
+
+.slideWrapper {
+  display: flex;
+  justify-content: space-around;
+  color: #ffffff;
+  margin: 20px; }
+  .slideWrapper ul {
+    padding-left: 40px;
+    list-style: disc; }
+  .slideWrapper li {
+    margin: 15px 0; }
+  .slideWrapper .leftSide {
+    width: 45%; }
+    .slideWrapper .leftSide .title {
+      background-color: #633167;
+      padding: 20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      font-size: 24px; }
+    .slideWrapper .leftSide .content {
+      min-height: 300px;
+      background: #294369;
+      background: linear-gradient(180deg, #294369 0%, #1f67af 100%); }
+  .slideWrapper .rightSide {
+    width: 45%; }
+    .slideWrapper .rightSide .title {
+      background-color: #003674;
+      padding: 20px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      font-size: 24px; }
+    .slideWrapper .rightSide .content {
+      min-height: 300px;
+      background: #294369;
+      background: linear-gradient(180deg, #294369 0%, #1f67af 100%); }
 
 .gallery {
   display: flex;
@@ -620,5 +657,13 @@ h4.pageTitle {
   .gallery img {
     width: 150px;
     height: 150px; }
+
+.navigation {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 40%;
+  z-index: 70; }
 
 /*# sourceMappingURL=styles.css.map */
