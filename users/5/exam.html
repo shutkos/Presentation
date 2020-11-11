@@ -25,14 +25,14 @@
                                 <img class="patientImgItem" src="../../img/5.png" alt="">
                             </div>
                             <div class="patientName">
-                                <p>Катріна</p>
+                                <p>Катерина</p>
                                 <p>Вік: 58 років</p>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="clinicalReview">
-                    <h3>Стислий опис клінічного випадку Сьюзен</h3>
+                    <h3>Стислий опис клінічного випадку Катерини<sup>1</sup></h3>
                     <div class="reviewItem">
                         <ul class="reviewListItem">
                             <li>Тяжка форма ізольованого НЗН
@@ -75,20 +75,20 @@
                     <ul class="answerWrapper">
                         <li class="answerItem" data-value="yes" style="display: none">
                             <ul>
-                                <li><p>Цей пацієнт потребує проведення диференціальної діагностики
+                                <li><p>Цей пацієнт потребує проведення диференціальної діагностики <sup>1</sup>
                                 </p></li>
                                 <li>
                                     <p>У даному випадку спостерігаються ознаки, пов’язані як з ХСОНМ (рецидивуючий НЗН
                                         і неспецифічні вогнища у білій речовині), так і з РС (наявність ОКС і симптомів,
                                         які дають підґрунтя
-                                        для того, щоб підозрювати РС)
+                                        для того, щоб підозрювати РС) <sup>3</sup>
                                     </p>
                                 </li>
                                 <li>
                                     <p>Із 27 спеціалістів, які розглядали даний випадок, 6 експертів поставили діагноз
                                         «РС», 10 діагностували
                                         ХСОНМ, 7 вказували на невизначений діагноз поміж РС/ХСОНМ, а 4 спеціалісти
-                                        поставили інші діагнози
+                                        поставили інші діагнози <sup>1</sup>
                                     </p>
                                 </li>
                             </ul>
@@ -113,7 +113,7 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer bottomFooter">
         <ul class="info">
             <li>AQP4-IgG – аутоантитіла до аквапорину-4;
             </li>
@@ -126,6 +126,11 @@
             <li>ОКС – олігоклональні стрічки (смуги); </li>
             <li>НЗН – неврит зорового нерва</li>
         </ul>
+        <ul class="info">
+            <li>1. Juryńczyk M, et al. J Neurol 2016;263(1):140-9;</li>
+            <li class="link1" style="display: none">2. Wingerchuk DM, et al. Neurology 2015;85(2):177-89;</li>
+            <li class="link2" style="display: none">3. Thompson AJ, et al. Lancet Neurol 2018;17(2):162-73.</li>
+        </ul>
     </div>
 </div>
 <div class="navigation">
@@ -137,7 +142,9 @@
 
     const btns = document.querySelectorAll(".buttonItem");
     const yes = document.querySelector('[data-value="yes"]');
-    const no = document.querySelector('[data-value="no"]')
+    const no = document.querySelector('[data-value="no"]');
+    const link1 = document.querySelector(".link1");
+    const link2 = document.querySelector(".link2");
 
     for (let i = 0; i < btns.length; i++) {
         let button = btns[i];
@@ -198,11 +205,15 @@
                 disableBtn(btn);
                 changer(answerPic);
                 changer(yes);
+                changer(link1);
+                changer(link2);
                 setTimeout(() => {
                     changer(answerPic);
                     changer(yes);
+                    changer(link1);
+                    changer(link2);
                     enableBtn(btn);
-                }, 7000);
+                }, 15000);
                 break;
             default:
         }

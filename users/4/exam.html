@@ -75,12 +75,12 @@
                         <li class="answerItem" data-value="yes" style="display: none">
                             <ul>
                                 <li><p>У даному випадку можна спостерігати типові ознаки, пов’язані із ХСОНМ, включаючи
-                                    двосторонній НЗН і вогнища у головному мозку, характерні для ХСОНМ
+                                    двосторонній НЗН і вогнища у головному мозку, характерні для ХСОНМ<sup>1,2</sup>
                                 </p></li>
                                 <li>
                                     <p>У відповідності до діагностичних критеріїв IPND з діагностики ХСОНМ у хворих без
                                         антитіл AQP4-IgG цьому пацієнту можна поставити діагноз «ХСОНМ» через наявність
-                                        у нього наступних ознак:
+                                        у нього наступних ознак:<sup>1,2</sup>
                                     </p>
                                     <ul>
                                         <li>наявність ≥ 2 провідних клінічних ознак ХСОНМ (НЗН і гострий мієліт з ВППМ)
@@ -93,7 +93,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <p>Відсутність у пацієнта типових ознак РС як-от: Т2 гіперінтенсивні вогнища чи ОКС
+                                    <p>Відсутність у пацієнта типових ознак РС як-от: Т2 гіперінтенсивні вогнища чи ОКС<sup>3</sup>
                                     </p>
                                 </li>
                             </ul>
@@ -118,17 +118,19 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer  bottomFooter">
         <ul class="info">
-            <li>AQP4-IgG – аутоантитіла до аквапорину-4;
-            </li>
-            <li>IPND – міжнародна група експертів з
-                діагностики нейромієліту зорового нерва;</li>
-            <li>ВППМ – вогнища протяжного поперечного
-                мієліту;</li>
-            <li>ХСОНМ – хвороби спектра оптиконевромієліту;</li>
-            <li>ОКС – олігоклональні стрічки (смуги);</li>
+            <li>AQP4-IgG – аутоантитіла до аквапорину-4; </li>
+            <li>IPND – міжнародна група експертів з діагностики нейромієліту зорового нерва; </li>
+            <li>ВППМ – вогнища протяжного поперечного мієліту; </li>
+            <li>ХСОНМ – хвороби спектра оптиконевромієліту; </li>
+            <li>ОКС – олігоклональні стрічки (смуги); </li>
             <li>НЗН – неврит зорового нерва</li>
+        </ul>
+        <ul class="info">
+            <li>1. Juryńczyk M, et al. J Neurol 2016;263(1):140-9;</li>
+            <li class="link1" style="display: none">2. Wingerchuk DM, et al. Neurology 2015;85(2):177-89;</li>
+            <li class="link2" style="display: none">3. Thompson AJ, et al. Lancet Neurol 2018;17(2):162-73.</li>
         </ul>
     </div>
 </div>
@@ -141,7 +143,9 @@
 
     const btns = document.querySelectorAll(".buttonItem");
     const yes = document.querySelector('[data-value="yes"]');
-    const no = document.querySelector('[data-value="no"]')
+    const no = document.querySelector('[data-value="no"]');
+    const link1 = document.querySelector(".link1");
+    const link2 = document.querySelector(".link2");
 
     for (let i = 0; i < btns.length; i++) {
         let button = btns[i];
@@ -192,11 +196,15 @@
                 disableBtn(btn);
                 changer(answerPic);
                 changer(yes);
+                changer(link1);
+                changer(link2);
                 setTimeout(() => {
                     changer(answerPic);
                     changer(yes);
+                    changer(link1);
+                    changer(link2);
                     enableBtn(btn);
-                }, 7000);
+                }, 15000);
                 break;
             case "3" :
                 disableBtn(btn);

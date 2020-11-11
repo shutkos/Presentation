@@ -25,14 +25,14 @@
                                 <img class="patientImgItem" src="../../img/2.png" alt="">
                             </div>
                             <div class="patientName">
-                                <p>Елейн</p>
+                                <p>Олена</p>
                                 <p>Вік: 28 роки</p>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="clinicalReview">
-                    <h3>Стислий опис клінічного випадку Елейн</h3>
+                    <h3>Стислий опис клінічного випадку  Олени<sup>1</sup></h3>
                     <div class="reviewItem">
                         <ul class="reviewListItem">
                             <li>Тяжка форма рецидивуючого ізольованого НЗН</li>
@@ -77,15 +77,17 @@
                         <li class="answerItem" data-value="yes" style="display: none">
                             <ul>
                                 <li><p>У даному випадку можна спостерігати декілька ознак, пов’язаних із ХСОНМ,
-                                    включаючи тяжку форму НЗН і наявність аутоантитіл до аквапорину-4 (AQP4-IgG)
+                                    включаючи тяжку форму НЗН і наявність аутоантитіл до аквапорину-4 (AQP4-IgG)<sup>1,2</sup>
                                 </p></li>
                                 <li>
-                                    <p>У відповідності до діагностичних критеріїв IPND цьому пацієнту можна поставити діагноз «ХСОНМ» через наявність у нього наступних ознак:
+                                    <p>У відповідності до діагностичних критеріїв IPND цьому пацієнту можна поставити
+                                        діагноз ХСОНМ через наявність у нього наступних ознак:<sup>2</sup>
                                     </p>
                                     <ul>
-                                        <li>наявність антитіл AQP4-IgG 	- відсутність ознак для постановки альтернативного діагнозу (наприклад, РС)
+                                        <li>наявність антитіл AQP4-IgG - відсутність ознак для постановки
+                                            альтернативного діагнозу (наприклад, РС)
                                         </li>
-                                        <li>наявність НЗН, провідної клінічної ознаки ХСОНМ</li>
+                                        <li>наявність НЗН, провідної клінічної ознаки ХСОНМ<sup>1-3</sup></li>
                                     </ul>
                                 </li>
                                 <li>
@@ -110,12 +112,20 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer bottomFooter">
         <ul class="info">
-            <li>EDMUS – Європейська база даних з оцінювання ступеня розсіяного склерозу
-                (European Database for Multiple Sclerosis); МП –метилпреднізолон;
+            <li>AQP4-IgG – аутоантитіла до аквапорину-4; </li>
+            <li>IPND – міжнародна група експертів з діагностики нейромієліту зорового нерва; </li>
+            <li>ХСОНМ – хвороби спектра оптиконевромієліту;</li>
+            <li>ОКС – олігоклональні стрічки (смуги); </li>
+            <li>НЗН – неврит зорового нерва</li>
+        </ul>
+        <ul class="info">
+            <li>1. Juryńczyk M, et al. J Neurol 2016;263(1):140-9;
             </li>
-            <li>ОКС – олігоклональні стрічки (смуги); ЗВП – зорові викликані потенціали.</li>
+            <li class="link1" style="display: none">2. Wingerchuk DM, et al. Neurology 2015;85(2):177-89;
+            </li>
+            <li class="link2" style="display: none">3. Thompson AJ, et al. Lancet Neurol 2018;17(2):162-73.</li>
         </ul>
     </div>
 </div>
@@ -128,7 +138,9 @@
 
     const btns = document.querySelectorAll(".buttonItem");
     const yes = document.querySelector('[data-value="yes"]');
-    const no = document.querySelector('[data-value="no"]')
+    const no = document.querySelector('[data-value="no"]');
+    const link1 = document.querySelector(".link1");
+    const link2 = document.querySelector(".link2");
 
     for (let i = 0; i < btns.length; i++) {
         let button = btns[i];
@@ -179,11 +191,15 @@
                 disableBtn(btn);
                 changer(answerPic);
                 changer(yes);
+                changer(link1);
+                changer(link2);
                 setTimeout(() => {
                     changer(answerPic);
                     changer(yes);
+                    changer(link1);
+                    changer(link2);
                     enableBtn(btn);
-                }, 7000);
+                }, 15000);
                 break;
             case "3" :
                 disableBtn(btn);

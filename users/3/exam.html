@@ -25,14 +25,14 @@
                                 <img class="patientImgItem" src="../../img/3.png" alt="">
                             </div>
                             <div class="patientName">
-                                <p>Джейн</p>
+                                <p>Софія</p>
                                 <p>Вік: 23 роки</p>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="clinicalReview">
-                    <h3>Стислий опис клінічного випадку Джейн</h3>
+                    <h3>Стислий опис клінічного випадку Софії<sup>1</sup></h3>
                     <div class="reviewItem">
                         <ul class="reviewListItem">
                             <li>Гіпестезії і парестезії</li>
@@ -73,18 +73,18 @@
                             <ul>
                                 <li><p>У даному випадку можна спостерігати декілька ознак, пов’язаних із РС, включаючи
                                     наявність вогнищ
-                                    у мозку та ОКС
+                                    у мозку та ОКС <sup>1,2</sup>
                                 </p></li>
                                 <li>
                                     <p>У відповідності до діагностичних критеріїв МакДональда у редакції 2017 року цьому
                                         пацієнту можна
                                         поставити діагноз «розсіяний склероз» через наявність у нього наступних ознак: -
-                                        Множинні вогнища ураження з об’єктивними клінічними доказами і наявність ОКС
+                                        Множинні вогнища ураження з об’єктивними клінічними доказами і наявність ОКС<sup>1,2</sup>
                                     </p>
                                 </li>
                                 <li>
                                     <p>Відсутність типових ознак ХСОНМ як-от: аутоантитіла до аквапорину-4 (AQP4-IgG) і
-                                        неврит зорового нерва
+                                        неврит зорового нерва<sup>3</sup>
                                     </p>
                                 </li>
                             </ul>
@@ -109,12 +109,21 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+    <div class="footer bottomFooter">
         <ul class="info">
             <li>EDMUS – Європейська база даних з оцінювання ступеня розсіяного склерозу
-                (European Database for Multiple Sclerosis); МП –метилпреднізолон;
+                (European Database for Multiple Sclerosis);
             </li>
-            <li>ОКС – олігоклональні стрічки (смуги); ЗВП – зорові викликані потенціали.</li>
+            <li>МП –метилпреднізолон;</li>
+            <li>ЗВП – зорові викликані потенціали.</li>
+            <li>ОКС – олігоклональні смуги; </li>
+            <li>AQP4-IgG – аутоантитіла до аквапорину-4;</li>
+            <li>Adapted from Juryńczyk M, et al. J Neurol 2016;263(1):140-9.</li>
+        </ul>
+        <ul class="info">
+            <li>1. Mantero V, et al. J Clin Neurol 2018;14(3):387–92.</li>
+            <li class="link1" style="display: none">2. Thompson AJ, et al. Lancet Neurol 2018;17(2):162-73;</li>
+            <li class="link2" style="display: none">3. Wingerchuk DM, et al. Neurology 2015;85(2):177-89.</li>
         </ul>
     </div>
 </div>
@@ -127,7 +136,10 @@
 
     const btns = document.querySelectorAll(".buttonItem");
     const yes = document.querySelector('[data-value="yes"]');
-    const no = document.querySelector('[data-value="no"]')
+    const no = document.querySelector('[data-value="no"]');
+    const link1 = document.querySelector(".link1");
+    const link2 = document.querySelector(".link2");
+
 
     for (let i = 0; i < btns.length; i++) {
         let button = btns[i];
@@ -167,11 +179,15 @@
                 disableBtn(btn);
                 changer(answerPic);
                 changer(yes);
+                changer(link1);
+                changer(link2);
                 setTimeout(() => {
                     changer(answerPic);
                     changer(yes);
+                    changer(link1);
+                    changer(link2);
                     enableBtn(btn);
-                }, 7000);
+                }, 15000);
 
                 break;
             case "2" :

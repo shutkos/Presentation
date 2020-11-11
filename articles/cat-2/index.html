@@ -31,29 +31,66 @@
     </div>
     <div class="container-fluid">
         <ol class="gallery">
-            <li><img src="./mri/1.jpg" alt=""><span>1</span></li>
-            <li><img src="./mri/2.jpg" alt=""><span>2</span></li>
-            <li><img src="./mri/3.jpg" alt=""><span>3</span></li>
-            <li><img src="./mri/3.1.jpg" alt=""><span>3</span></li>
-            <li><img src="./mri/4.jpg" alt=""><span>4</span></li>
-            <li><img src="./mri/5.jpg" alt=""><span>5</span></li>
-            <li><img src="./mri/6.jpg" alt=""><span>6</span></li>
+            <li>
+                <a class="image-popup-vertical-fit" href="./mri/1.jpg" title="MRI image from Wingerchuk DM, et al. Neurology 2015;85:177-189.">
+                    <img src="./mri/1.jpg" alt="">
+                    <span>1</span>
+                </a>
+            </li>
+            <li>
+                <a class="image-popup-vertical-fit" href="./mri/2.jpg" title="MRI image from Bennett JL. J Neuroophthalmol. 2016;36:238–245.">
+                    <img src="./mri/2.jpg" alt="">
+                    <span>2</span>
+                </a>
+            </li>
+            <li>
+                <a class="image-popup-vertical-fit" href="./mri/3.jpg" title="MRI image from Bennett JL. J Neuroophthalmol. 2016;36:238–245.">
+                    <img src="./mri/3.jpg" alt="">
+                    <span>3</span>
+                </a>
+            </li>
+            <li>
+                <a class="image-popup-vertical-fit" href="./mri/3.1.jpg" title="MRI image from Bennett JL. J Neuroophthalmol. 2016;36:238–245.">
+                    <img src="./mri/3.1.jpg" alt="">
+                    <span>3</span>
+                </a>
+            </li>
+            <li>
+                <a class="image-popup-vertical-fit" href="./mri/4.jpg" title="MRI image from Wingerchuk DM, et al. Neurology 2015;85:177-189.">
+                    <img src="./mri/4.jpg" alt="">
+                    <span>4</span>
+                </a>
+            </li>
+            <li>
+                <a class="image-popup-vertical-fit" href="./mri/5.jpg" title="MRI image from Wingerchuk DM, et al. Neurology 2015;85:177-189.">
+                    <img src="./mri/5.jpg" alt="">
+                    <span>5</span>
+                </a>
+            </li>
+            <li>
+                <a class="image-popup-vertical-fit" href="./mri/6.jpg" title="MRI image from Wingerchuk DM, et al. Neurology 2015;85:177-189.">
+                    <img src="./mri/6.jpg" alt="">
+                    <span>6</span>
+                </a>
+            </li>
         </ol>
     </div>
 
     <div class="footer">
         <ul class="info">
-            <li>*На основі діагностичних критеріїв, розроблених IPND (міжнародна група експертів з діагностики
+            <li><sup>*</sup> На основі діагностичних критеріїв, розроблених IPND (міжнародна група експертів з діагностики
                 нейромієліту зорового нерва).
             </li>
-            <li>‡У ході ретроспективного дослідження аналізувалися дані 292 пацієнтів з КНР з позитивним результатом
+            <li><sup>‡</sup> У ході ретроспективного дослідження аналізувалися дані 292 пацієнтів з КНР з позитивним результатом
                 дослідження на AQP4-IgG, яким був поставлений діагноз оптиконевромієліт/ХСОНМ на основі діагностичних
                 критеріїв 2006 р. для оптиконевромієліту і діагностичних критеріїв 2015 р. для ХСОНМ.
             </li>
-            <li>†З типовими для ХСОНМ діенцефальними ураженнями головного мозку. #Як поперековий мієліт.</li>
-            <li>#Як
-                діенцефальний синдром.</li>
-            <li>1. Wingerchuk DM, et al. Neurology 2015;85:177-89; 2. Long Y, et al. Front Neurol 2017;28;8:62.</li>
+            <li><sup>†</sup> З типовими для ХСОНМ діенцефальними ураженнями головного мозку. #Як поперековий мієліт.</li>
+            <li><sup>#</sup> Як діенцефальний синдром.</li>
+        </ul>
+        <ul class="info">
+            <li>1. Wingerchuk DM, et al. Neurology 2015;85:177-89;</li>
+            <li>2. Long Y, et al. Front Neurol 2017;28;8:62.</li>
         </ul>
     </div>
 </div>
@@ -61,5 +98,45 @@
     <a href="/presentation/articles/cat-2/3.html" class="left"><img src="../../img/left.png" alt=""></a>
     <a href="/presentation/articles/cat-2/2.html" class="right"><img src="../../img/right.png" alt=""></a>
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.image-popup-vertical-fit').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            mainClass: 'mfp-img-mobile',
+            image: {
+                verticalFit: true
+            }
+
+        });
+
+        $('.image-popup-fit-width').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            image: {
+                verticalFit: false
+            }
+        });
+
+        $('.image-popup-no-margins').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            closeBtnInside: false,
+            fixedContentPos: true,
+            mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+            image: {
+                verticalFit: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300 // don't foget to change the duration also in CSS
+            }
+        });
+
+    });
+</script>
 </body>
 </html>
