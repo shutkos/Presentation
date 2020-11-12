@@ -48,7 +48,6 @@
 
 .modalButtonsItem {
   border-radius: 10px;
-  padding: 10px 15px;
   text-align: center;
   color: #ffffff;
   display: inline-block;
@@ -67,7 +66,6 @@
 
 .modalButtonsItem:nth-child(1) {
   border-radius: 10px;
-  padding: 10px 15px;
   text-align: center;
   color: #ffffff;
   display: inline-block;
@@ -79,7 +77,6 @@
 
 .modalButtonsItem:nth-child(2) {
   border-radius: 10px;
-  padding: 10px 15px;
   text-align: center;
   color: #ffffff;
   display: inline-block;
@@ -91,7 +88,6 @@
 
 .modalButtonsItem:nth-child(3) {
   border-radius: 10px;
-  padding: 10px 15px;
   text-align: center;
   color: #ffffff;
   display: inline-block;
@@ -303,7 +299,6 @@ body {
 
 .startButton {
   border-radius: 10px;
-  padding: 10px 15px;
   text-align: center;
   color: #ffffff;
   display: inline-block;
@@ -574,7 +569,6 @@ h4.pageTitle {
   padding-top: 20px; }
   .navButtons .buttonItem {
     border-radius: 10px;
-    padding: 10px 15px;
     text-align: center;
     color: #ffffff;
     display: inline-block;
@@ -588,6 +582,18 @@ h4.pageTitle {
       background: linear-gradient(0deg, #9f9f9f 0%, #343434 100%); }
     .navButtons .buttonItem img {
       width: 40px; }
+
+button.answer {
+  margin: 10px 15px; }
+
+a.buttonItem, .js-modal {
+  padding: 10px 15px; }
+
+button.answer:disabled {
+  visibility: hidden; }
+
+.hide {
+  opacity: 0; }
 
 .catButtons {
   display: flex;

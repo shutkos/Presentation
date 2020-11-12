@@ -13,7 +13,7 @@ $color-green: #00975a;
 
 @mixin button {
   border-radius: 10px;
-  padding: 10px 15px;
+
   text-align: center;
   color: $color-white;
   display: inline-block;
@@ -787,6 +787,23 @@ h4.pageTitle {
       width: 40px;
     }
   }
+}
+
+button.answer{
+  margin: 10px 15px
+}
+
+a.buttonItem, .js-modal{
+  padding: 10px 15px;
+}
+
+button.answer:disabled{
+  visibility: hidden;
+
+}
+
+.hide{
+  opacity: 0;
 }
 
 .catButtons {

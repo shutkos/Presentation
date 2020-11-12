@@ -32,7 +32,7 @@
                     </ul>
                 </div>
                 <div class="clinicalReview">
-                    <h3>Стислий опис клінічного випадку Бориса</h3>
+                    <h3>Стислий опис клінічного випадку Бориса <sup>1</sup></h3>
                     <div class="reviewItem">
                         <ul class="reviewListItem">
                             <li>Рецидиви двостороннього НЗН
@@ -62,8 +62,8 @@
                                 <img src="../../img/pointer.png">
                             </button>
                         </li>
-                        <li class="modalButtonsItem answer">
-                            <button class="buttonItem" data-value="3">
+                        <li class="modalButtonsItem ">
+                            <button class="buttonItem answer" data-value="3">
                                 <img class="answerPic" src="../../img/false.png" alt="" style="display: none">
                                 &nbsp; Невизначений діагноз &nbsp; &nbsp;
                                 <img src="../../img/pointer.png">
@@ -167,6 +167,7 @@
         for (let i = 0; i < btns.length; i++) {
             if (btns[i] !== btn) {
                 btns[i].disabled = false;
+                btns[i].parentElement.classList.remove("hide");
             }
         }
     }
@@ -175,6 +176,7 @@
         for (let i = 0; i < btns.length; i++) {
             if (btns[i] !== btn) {
                 btns[i].disabled = true;
+                btns[i].parentElement.classList.add("hide");
             }
         }
     }
