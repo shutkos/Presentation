@@ -238,7 +238,9 @@ body {
   margin: 0 auto; }
 
 .containerFluid {
-  width: 100%; }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
 
 .hide {
   display: none; }
@@ -246,6 +248,12 @@ body {
 .header {
   background: #ffffff;
   text-align: right; }
+
+.content {
+  flex-grow: 1; }
+
+.header, .footer {
+  flex-shrink: 0; }
 
 .footer {
   margin-top: 50px;
@@ -259,9 +267,9 @@ body {
       margin-bottom: 5px; }
 
 .bottomFooter {
-  position: absolute;
+  /*position: absolute;
   bottom: 0;
-  width: 25%; }
+  width: 25%;*/ }
 
 .logo {
   width: 100%;
@@ -306,7 +314,8 @@ body {
   background: linear-gradient(180deg, #139de1 0%, #003674 100%);
   margin-top: 50px;
   text-decoration: none;
-  font-size: 1.6em; }
+  font-size: 1.6em;
+  padding: 10px 15px; }
   .startButton:hover {
     background: linear-gradient(0deg, #139de1 0%, #003674 100%); }
 
@@ -335,7 +344,8 @@ h4.pageTitle {
   border: 1px solid #ffffff;
   border-radius: 50%;
   box-shadow: 3px 6px 5px 0 rgba(0, 0, 0, 0.5);
-  transition: all .3s ease-in-out; }
+  transition: all .3s ease-in-out;
+  width: 50px; }
 
 .homeLink:hover {
   transform: scale(1.1); }
@@ -371,15 +381,16 @@ h4.pageTitle {
   text-align: center;
   border: 3px solid #ffffff;
   position: relative;
-  margin: auto; }
+  margin: auto;
+  overflow: hidden; }
 
 .patientImgItem {
-  position: absolute;
-  top: -36px;
-  z-index: 99;
-  right: -1px;
+  /*  position: absolute;
+    top: -36px;
+    z-index: 99;
+    right: -1px;*/
   width: 100%;
-  max-width: 242px; }
+  /*  max-width: 242px;*/ }
 
 .patientName {
   padding: 15px 10px;
@@ -567,7 +578,7 @@ h4.pageTitle {
   flex-direction: row;
   justify-content: flex-end;
   padding-top: 20px; }
-  .navButtons .buttonItem {
+  .navButtons .buttonItem2 {
     border-radius: 10px;
     text-align: center;
     color: #ffffff;
@@ -578,9 +589,9 @@ h4.pageTitle {
     display: flex;
     align-items: center;
     text-decoration: none; }
-    .navButtons .buttonItem:hover {
+    .navButtons .buttonItem2:hover {
       background: linear-gradient(0deg, #9f9f9f 0%, #343434 100%); }
-    .navButtons .buttonItem img {
+    .navButtons .buttonItem2 img {
       width: 40px; }
 
 button.answer {
@@ -679,7 +690,7 @@ button.answer:disabled {
   width: 100%;
   justify-content: space-between;
   position: absolute;
-  top: 40%;
+  top: 35%;
   z-index: 70; }
 
 sub, sup {
@@ -824,5 +835,38 @@ img.mfp-img {
 .mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0; }
+
+@media (max-width: 1440px) {
+  .patientImgWrapper {
+    width: 200px;
+    height: 200px; } }
+@media (max-width: 1366px) {
+  .relapseItem .date {
+    width: 160px; }
+
+  .contentItem .dots {
+    margin-right: 30px; } }
+@media (max-width: 1280px) {
+  .patientImgWrapper {
+    width: 150px;
+    height: 150px; } }
+@media (max-width: 1152px) {
+  .relapseItem .date {
+    width: 90px; } }
+@media (max-width: 1080px) {
+  .contentItem .hero {
+    width: 25%; }
+
+  .contentItem .relapses {
+    width: 75%; } }
+@media (max-width: 1050px) {
+  .contentItem .dots {
+    margin-right: 15px; } }
+@media (max-width: 1024px) {
+  .contentItem .hero {
+    width: 20%; }
+
+  .contentItem .relapses {
+    width: 80%; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -13,7 +13,6 @@ $color-green: #00975a;
 
 @mixin button {
   border-radius: 10px;
-
   text-align: center;
   color: $color-white;
   display: inline-block;
@@ -348,7 +347,9 @@ body {
 }
 
 .containerFluid {
-  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .hide {
@@ -360,9 +361,18 @@ body {
   text-align: right;
 }
 
+.content {
+  flex-grow: 1;
+}
+
+.header, .footer {
+  flex-shrink: 0;
+}
+
 .footer {
   margin-top: 50px;
   padding: 20px 50px;
+
 
   .info {
     margin-bottom: 20px;
@@ -377,9 +387,9 @@ body {
 }
 
 .bottomFooter {
-  position: absolute;
+  /*position: absolute;
   bottom: 0;
-  width: 25%;
+  width: 25%;*/
 }
 
 .logo {
@@ -435,6 +445,7 @@ body {
   margin-top: 50px;
   text-decoration: none;
   font-size: 1.6em;
+  padding: 10px 15px;
 }
 
 .pageTitle {
@@ -468,6 +479,8 @@ h4.pageTitle {
   border-radius: 50%;
   box-shadow: 3px 6px 5px 0 rgba(0, 0, 0, 0.5);
   transition: all .3s ease-in-out;
+  width: 50px;
+
 }
 
 .homeLink:hover {
@@ -510,15 +523,16 @@ h4.pageTitle {
   border: 3px solid #ffffff;
   position: relative;
   margin: auto;
+  overflow: hidden;
 }
 
 .patientImgItem {
-  position: absolute;
-  top: -36px;
-  z-index: 99;
-  right: -1px;
+  /*  position: absolute;
+    top: -36px;
+    z-index: 99;
+    right: -1px;*/
   width: 100%;
-  max-width: 242px;
+  /*  max-width: 242px;*/
 }
 
 .patientName {
@@ -776,7 +790,7 @@ h4.pageTitle {
   justify-content: flex-end;
   padding-top: 20px;
 
-  .buttonItem {
+  .buttonItem2 {
     @include button_black;
     margin-right: 15px;
     display: flex;
@@ -789,20 +803,20 @@ h4.pageTitle {
   }
 }
 
-button.answer{
+button.answer {
   margin: 10px 15px
 }
 
-a.buttonItem, .js-modal{
+a.buttonItem, .js-modal {
   padding: 10px 15px;
 }
 
-button.answer:disabled{
+button.answer:disabled {
   visibility: hidden;
 
 }
 
-.hide{
+.hide {
   opacity: 0;
 }
 
@@ -923,9 +937,8 @@ button.answer:disabled{
   width: 100%;
   justify-content: space-between;
   position: absolute;
-  top: 40%;
+  top: 35%;
   z-index: 70;
-
 }
 
 sub, sup {
@@ -1094,4 +1107,63 @@ img.mfp-img {
 .mfp-with-zoom.mfp-removing .mfp-container,
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
+}
+
+@media (max-width: 1920px) {
+}
+
+@media (max-width: 1680px) {
+}
+
+@media (max-width: 1440px) {
+  .patientImgWrapper {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .relapseItem .date {
+    width: 160px;
+  }
+  .contentItem .dots {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .patientImgWrapper {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .relapseItem .date {
+    width: 90px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .contentItem .hero{
+    width: 25%;
+  }
+  .contentItem .relapses{
+    width: 75%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .contentItem .dots {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contentItem .hero{
+    width: 20%;
+  }
+  .contentItem .relapses{
+    width: 80%;
+  }
 }
