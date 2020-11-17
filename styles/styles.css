@@ -256,7 +256,7 @@ body {
   flex-shrink: 0; }
 
 .footer {
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 20px 50px; }
   .footer .info {
     margin-bottom: 20px;
@@ -312,12 +312,14 @@ body {
   display: inline-block;
   background: #139de1;
   background: linear-gradient(180deg, #139de1 0%, #003674 100%);
-  margin-top: 50px;
+  margin-top: 20px;
   text-decoration: none;
   font-size: 1.6em;
   padding: 10px 15px; }
   .startButton:hover {
     background: linear-gradient(0deg, #139de1 0%, #003674 100%); }
+  .startButton img {
+    width: 50px; }
 
 .pageTitle {
   font-size: 2em;
@@ -353,7 +355,7 @@ h4.pageTitle {
 .patients {
   display: flex;
   justify-content: space-between;
-  padding-top: 50px; }
+  padding-top: 20px; }
 
 .patient {
   width: calc(20% - 20px);
@@ -429,13 +431,13 @@ h4.pageTitle {
 .levelsTip {
   display: flex;
   justify-content: space-around;
-  padding: 20px 0; }
+  padding: 10px 0; }
 
 .buttonTips {
   color: #ffffff;
   font-size: 1em;
   text-align: center;
-  padding: 50px 0 0 0;
+  padding: 20px 0 0 0;
   font-weight: bold; }
 
 .buttonsBlock {
@@ -475,7 +477,7 @@ h4.pageTitle {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
   .relapseItem .date {
     color: #ffffff;
     width: 210px; }
@@ -522,7 +524,7 @@ h4.pageTitle {
   flex-direction: row;
   justify-content: flex-start; }
   .userIconsTipItem {
-    padding: 20px;
+    padding: 10px 20px;
     color: #ffffff;
     font-weight: bold; }
     .userIconsTipItem img {
@@ -617,7 +619,9 @@ button.answer:disabled {
 
 .slide {
   border: 3px solid #ffffff;
-  margin: 50px 20px 50px 20px; }
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; }
   .slide img {
     width: 100%; }
 
@@ -839,13 +843,52 @@ img.mfp-img {
 @media (max-width: 1440px) {
   .patientImgWrapper {
     width: 200px;
-    height: 200px; } }
+    height: 200px; }
+
+  .intro h1 {
+    line-height: 1.5em; }
+
+  .intro h2 {
+    line-height: 1.3em; }
+
+  .slide {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto; } }
 @media (max-width: 1366px) {
+  .homeLink {
+    width: 30px; }
+
   .relapseItem .date {
     width: 160px; }
 
+  .contentItem {
+    padding-top: 0; }
+
   .contentItem .dots {
-    margin-right: 30px; } }
+    margin-right: 30px; }
+
+  .relapseItem {
+    margin-bottom: 5px; }
+
+  .relapseItem .speachBuble {
+    font-size: 12px;
+    min-height: auto; }
+
+  .userIcons img {
+    width: 20px;
+    height: 20px; }
+
+  .buttonsTips {
+    padding: 5px 0 0 0; }
+
+  .startButton {
+    font-size: 1.3em;
+    padding: 5px 15px; }
+
+  .patientImgWrapper {
+    width: 150px;
+    height: 150px; } }
 @media (max-width: 1280px) {
   .patientImgWrapper {
     width: 150px;
@@ -858,7 +901,15 @@ img.mfp-img {
     width: 25%; }
 
   .contentItem .relapses {
-    width: 75%; } }
+    width: 75%; }
+
+  .intro h1 {
+    line-height: 1.2em;
+    font-size: 5em; }
+
+  .intro h2 {
+    line-height: 1.0em;
+    font-size: 4em; } }
 @media (max-width: 1050px) {
   .contentItem .dots {
     margin-right: 15px; } }

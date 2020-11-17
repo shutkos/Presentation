@@ -150,7 +150,7 @@
         let button = btns[i];
         button.addEventListener("click", () => {
             showAnswerPic(button.firstElementChild, button);
-        });
+        }, {once:true});
     }
 
     function changer(element) {
@@ -190,6 +190,9 @@
                     changer(answerPic);
                     changer(no);
                     enableBtn(btn);
+                    btn.addEventListener("click", (e) => {
+                        showAnswerPic(btn.firstElementChild, btn);
+                    }, {once:true});
                 }, 3000);
 
                 break;
@@ -201,6 +204,9 @@
                     changer(answerPic);
                     changer(no);
                     enableBtn(btn);
+                    btn.addEventListener("click", (e) => {
+                        showAnswerPic(btn.firstElementChild, btn);
+                    }, {once:true});
                 }, 3000);
                 break;
             case "3" :
@@ -215,6 +221,9 @@
                     changer(link1);
                     changer(link2);
                     enableBtn(btn);
+                    btn.addEventListener("click", (e) => {
+                        showAnswerPic(btn.firstElementChild, btn);
+                    }, {once:true});
                 }, 15000);
                 break;
             default:

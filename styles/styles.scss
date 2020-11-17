@@ -370,7 +370,7 @@ body {
 }
 
 .footer {
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 20px 50px;
 
 
@@ -442,10 +442,13 @@ body {
 
 .startButton {
   @include button_blue;
-  margin-top: 50px;
+  margin-top: 20px;
   text-decoration: none;
   font-size: 1.6em;
   padding: 10px 15px;
+  img{
+    width: 50px;
+  }
 }
 
 .pageTitle {
@@ -490,7 +493,7 @@ h4.pageTitle {
 .patients {
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .patient {
@@ -580,14 +583,14 @@ h4.pageTitle {
 .levelsTip {
   display: flex;
   justify-content: space-around;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .buttonTips {
   color: $color-white;
   font-size: 1em;
   text-align: center;
-  padding: 50px 0 0 0;
+  padding: 20px 0 0 0;
   font-weight: bold;
 }
 
@@ -647,7 +650,7 @@ h4.pageTitle {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
   .date {
     color: $color-white;
@@ -709,7 +712,7 @@ h4.pageTitle {
   justify-content: flex-start;
 
   &Item {
-    padding: 20px;
+    padding: 10px 20px;
     color: $color-white;
     font-weight: bold;
 
@@ -834,7 +837,9 @@ button.answer:disabled {
 
 .slide {
   border: 3px solid $color-white;
-  margin: 50px 20px 50px 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 
   img {
     width: 100%;
@@ -1109,26 +1114,74 @@ img.mfp-img {
   opacity: 0;
 }
 
-@media (max-width: 1920px) {
-}
-
-@media (max-width: 1680px) {
-}
-
+//media fixes
 @media (max-width: 1440px) {
   .patientImgWrapper {
     width: 200px;
     height: 200px;
   }
+
+  .intro h1 {
+    line-height: 1.5em;
+  }
+
+  .intro h2 {
+    line-height: 1.3em;
+  }
+
+  .slide{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 1366px) {
+
+  .homeLink{
+    width: 30px;
+  }
+
   .relapseItem .date {
     width: 160px;
   }
+
+  .contentItem{
+    padding-top: 0;
+  }
+
   .contentItem .dots {
     margin-right: 30px;
   }
+
+  .relapseItem{
+    margin-bottom: 5px;
+  }
+
+  .relapseItem .speachBuble{
+    font-size: 12px;
+    min-height: auto;
+  }
+
+  .userIcons img{
+    width: 20px;
+    height: 20px;
+  }
+
+  .buttonsTips{
+    padding: 5px 0 0 0;
+  }
+
+  .startButton{
+    font-size: 1.3em;
+    padding: 5px 15px;
+  }
+
+  .patientImgWrapper{
+    width: 150px;
+    height: 150px;
+  }
+
 }
 
 @media (max-width: 1280px) {
@@ -1145,11 +1198,20 @@ img.mfp-img {
 }
 
 @media (max-width: 1080px) {
-  .contentItem .hero{
+  .contentItem .hero {
     width: 25%;
   }
-  .contentItem .relapses{
+  .contentItem .relapses {
     width: 75%;
+  }
+  .intro h1 {
+    line-height: 1.2em;
+    font-size: 5em;
+  }
+
+  .intro h2 {
+    line-height: 1.0em;
+    font-size: 4em;
   }
 }
 
@@ -1160,10 +1222,10 @@ img.mfp-img {
 }
 
 @media (max-width: 1024px) {
-  .contentItem .hero{
+  .contentItem .hero {
     width: 20%;
   }
-  .contentItem .relapses{
+  .contentItem .relapses {
     width: 80%;
   }
 }
