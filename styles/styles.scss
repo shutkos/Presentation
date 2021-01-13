@@ -370,14 +370,13 @@ body {
 }
 
 .footer {
-  margin-top: 20px;
-  padding: 20px 50px;
-
+  margin-top: 10px;
+  padding: 0 50px;
 
   .info {
     margin-bottom: 20px;
     color: $color-white;
-    font-size: 12px;
+    font-size: 10px;
 
     li {
       display: block;
@@ -446,7 +445,8 @@ body {
   text-decoration: none;
   font-size: 1.6em;
   padding: 10px 15px;
-  img{
+
+  img {
     width: 50px;
   }
 }
@@ -460,15 +460,15 @@ body {
 }
 
 h2.pageTitle {
-  font-size: 1.75em;
+  font-size: 1.4em;
 }
 
 h3.pageTitle {
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 h4.pageTitle {
-  font-size: 1.25em;
+  font-size: 1.2em;
 }
 
 .pageTitleWrapper {
@@ -840,12 +840,59 @@ button.answer:disabled {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  text-align: center;
 
   img {
     width: 100%;
   }
 
 
+  &Item {
+    //width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.splitSlide {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  li {
+    display: block;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid $color-white;
+    position: relative;
+
+    span {
+      display: block;
+      color: $color-blue;
+      background: $color-white;
+      position: absolute;
+      bottom: 33px;
+      left: 0;
+      border-radius: 50%;
+      text-align: center;
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+      line-height: 1.3;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .slideWrapper {
@@ -861,6 +908,7 @@ button.answer:disabled {
 
   li {
     margin: 15px 0;
+    text-align: left;
   }
 
   .leftSide {
@@ -898,42 +946,6 @@ button.answer:disabled {
       background: rgb(41, 67, 105);
       background: linear-gradient(180deg, rgba(41, 67, 105, 1) 0%, rgba(31, 103, 175, 1) 100%);
     }
-  }
-}
-
-.gallery {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-  li {
-    display: block;
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 1px solid $color-white;
-    position: relative;
-
-    span {
-      display: block;
-      color: $color-blue;
-      background: $color-white;
-      position: absolute;
-      bottom: 55px;
-      left: 0;
-      border-radius: 50%;
-      text-align: center;
-      width: 20px;
-      height: 20px;
-      padding: 5px;
-      line-height: 1.3;
-    }
-  }
-
-  img {
-    width: 150px;
-    height: 150px;
   }
 }
 
@@ -1113,6 +1125,9 @@ img.mfp-img {
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
 }
+.slide-2-1{
+  max-width: 1280px;
+}
 
 //media fixes
 @media (max-width: 1440px) {
@@ -1129,16 +1144,39 @@ img.mfp-img {
     line-height: 1.3em;
   }
 
-  .slide{
+  .slide {
     width: 100%;
-    max-width: 960px;
+    max-width: 1280px;
     margin: 0 auto;
   }
+
+  .slide-2-1 {
+    max-width: 800px;
+  }
+
+  .slide-2-3 {
+    max-width: 1050px;
+  }
+  .slide-3-1 {
+    max-width: 1050px;
+  }
+  .slide-3-2 {
+    max-width: 1050px;
+  }
+  .slide-3-3 {
+    max-width: 1050px;
+  }
+
 }
 
 @media (max-width: 1366px) {
 
-  .homeLink{
+  .slide-1-3 {
+    max-width: 1050px;
+  }
+
+
+  .homeLink {
     width: 30px;
   }
 
@@ -1146,7 +1184,7 @@ img.mfp-img {
     width: 160px;
   }
 
-  .contentItem{
+  .contentItem {
     padding-top: 0;
   }
 
@@ -1154,30 +1192,30 @@ img.mfp-img {
     margin-right: 30px;
   }
 
-  .relapseItem{
+  .relapseItem {
     margin-bottom: 5px;
   }
 
-  .relapseItem .speachBuble{
+  .relapseItem .speachBuble {
     font-size: 12px;
     min-height: auto;
   }
 
-  .userIcons img{
+  .userIcons img {
     width: 20px;
     height: 20px;
   }
 
-  .buttonsTips{
+  .buttonsTips {
     padding: 5px 0 0 0;
   }
 
-  .startButton{
+  .startButton {
     font-size: 1.3em;
     padding: 5px 15px;
   }
 
-  .patientImgWrapper{
+  .patientImgWrapper {
     width: 150px;
     height: 150px;
   }
